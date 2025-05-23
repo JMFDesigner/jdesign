@@ -3,7 +3,7 @@ const avatarImg = document.querySelector(".about_me_avatar img");
 const avatarOriginal = avatarImg ? avatarImg.src : "";
 
 // Mostrar texto base al cargar
-bocadillo.innerHTML = `<p class="inicialt">Haz clic en los íconos que están debajo de mi avatar para saber más sobre mí 👇</p>`;
+bocadillo.innerHTML = `<p class="inicialt">Haz clic en los iconos que están debajo de mi avatar para saber más sobre mí 👇</p>`;
 
 // Función común para cerrar y restaurar texto base
 function asignarCierre(idBotonCerrar) {
@@ -11,7 +11,7 @@ function asignarCierre(idBotonCerrar) {
     const cerrarBtn = document.getElementById(idBotonCerrar);
     if (cerrarBtn) {
       cerrarBtn.addEventListener("click", () => {
-        bocadillo.innerHTML = `<p class="inicialt">Haz clic en los íconos que están debajo de mi avatar para saber más sobre mí 👇</p>`;
+        bocadillo.innerHTML = `<p class="inicialt">Haz clic en los iconos que están debajo de mi avatar para saber más sobre mí 👇</p>`;
         bocadillo.parentElement.classList.remove("visible");
         if (avatarImg) avatarImg.src = avatarOriginal;
       });
