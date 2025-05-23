@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta name="author" content="Jesús Muñoz Fernández">
+  <meta name="description" content="Página web Jesús Muñoz Fernández">
+  <meta charset="UTF-8">
+  <meta title="JM">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Img\Avatar\Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="Assets/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body class="fondo fondo1">
+
+
+
+
+  <nav class="navbar">
+    <img src="Assets\Img\Iconos\Logo.png" alt="Logo J.Design" class="logo-nav">
+    <ul class="nav-links">
+      <li><a href="#about_me">Sobre mí</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#footer">Contacto</a></li>
+    </ul>
+
+    <a href="mailto:j.munozfernandez96@gmail.com?subject=¡Quiero%20hablar%20contigo!" class="btn-contacto">
+      <img src="Assets\Img\Iconos\mail.png" alt="Email" id="boton_nav">
+    </a>
+    <a href="https://www.linkedin.com/in/jesús-munoz" target="_blank" class="btn-contacto">
+      <img src="Assets\Img\Iconos\linkedin.png" alt="LinkedIn" id="boton_nav">
+    </a>
+  </nav>
+
+
+  <header class="hero-header">
+    <img src="Assets\Img\Avatar\avatar-h.png" id="img-hero">
+    <div class="hero-content">
+      <h1 class="parallax-title"><img src="Assets\Img\Avatar\Logor.png" class="imglogo"><span
+          style="font-family:akira; letter-spacing: 0.7vw;" id="span">.</span>Design</h1>
+      <p>Bienvenido a mi portfolio</p>
+    </div>
+  </header>
+  <hr>
+  <main>
+    <div class="intro">
+      <div class="text">
+        <h2>Jesús Muñoz Fernández</h2>
+        <h4>Diseñador gráfico y maquetador web</h4>
+        <p>Es un placer darte la bienvenida a este espacio personal y profesional. Aquí podrás conocer más sobre mi
+          trayectoria, experiencia y los proyectos en los que he trabajado.
+          Te invito a explorar el contenido y descubrir cómo mi perfil puede aportar valor en distintos ámbitos. Espero
+          que encuentres algo que te interese o te inspire.</p>
+      </div>
+      <img src="Assets\Img\Galeria\diseño4.png" id="introd" alt="Imagen 1">
+      <img src="Assets\Img\Galeria\ilustracion-4.png" id="introi1" alt="Imagen 2">
+      <img src="Assets\Img\Galeria\ilustracion-2.png" id="introi2" alt="Imagen 3">
+      <div id="overlay"
+        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+      </div>
+    </div>
+
+    <hr id="about_me">
+    <section class="about_me_seccion oculto-scroll">
+    <div class="about_me_grid">
+      <div class="about_me_avatar_area">
+
+
+
+
+
+        <div class="about_me_botones">
+          <div class="about_me_avatar">
+            <img src="Assets\Img\Avatar\Avatar_1.png" alt="Avatar">
+          </div>
+
+          <div class="about_me_botones_grid">
+            <button class="about_me_boton" id="aboutConoceme">🙋‍♂️</button>
+            <button class="about_me_boton" id="aboutEstudios">🎓</button>
+            <button class="about_me_boton" id="aboutExperiencia">💼</button>
+            <button class="about_me_boton" id="aboutContacto">📧</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="about_me_ventana">
+        <div class="ventana-barra">
+          <span class="ventana-circulo rojo"></span>
+          <span class="ventana-circulo amarillo"></span>
+          <span class="ventana-circulo verde"></span>
+        </div>
+        <div class="ventana-contenido">
+          <p id="aboutBocadillo"></p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+    <hr>
+    <section class="proyectos" id="proyectos">
+      <h2>Galeria de proyectos</h2>
+      <div class="proyectos-grid">
+        <div class="slideshow-container" id="slideshow"></div>
+        <div class="tabs">
+          <button class="tab-button" data-categoria="diseñografico">Diseño Gráfico</button>
+          <button class="tab-button" data-categoria="maquetacionweb">Maquetación Web</button>
+          <button class="tab-button" data-categoria="ilustracion">Ilustración</button>
+          <button class="tab-button" data-categoria="logo">Identidad visual</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="footer" id="footer">
+    <div class="footer-contenido">
+      <p><b>2025 Jesús Muñoz Fernández. Todos los derechos reservados.</b></p>
+      <p>j.munozfernandez96@gmail.cómo</p>
+      <p style="color:white">Valladolid / Segovia</p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
