@@ -738,8 +738,6 @@ footer {
   .nav-links li a {
 
     font-size: 14px;
-    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
-    padding: 4px;
   }
 
   #boton_nav {
@@ -773,7 +771,8 @@ footer {
 
 }
 .logo-nav{
-  margin: auto
+  margin: auto;
+  margin-right: 5px;
 }
   .hero-header h1 {
     font-size: 9vw;
