@@ -15,6 +15,7 @@
   --color-principal: #2596be;
   --color-secundario: #ff8c1e;
   --color-principal-oscuro: #0d2c3a;
+  --color-j: #01cac0;
 }
 
 body {
@@ -41,8 +42,9 @@ hr {
 }
 
 .fondo1 {
-  background-image: url("../Img/Fondos/fondo1.jpg");
-
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)),
+    url("../Img/Fondos/fondo1.jpg");
 }
 
 
@@ -68,15 +70,15 @@ hr {
 }
 
 .logo-nav {
-  width: clamp(14px, 18vw, 40px);
+  width: 29px;
   margin-right: 2vw;
-  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+  text-shadow: 0px 0px 2px black;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2vw;
+  gap: 1vw;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -101,8 +103,7 @@ hr {
 
 .nav-links li a:hover,
 .nav-links li a:focus {
-  background: var(--color-secundario);
-  color: var(--color-principal-oscuro);
+  color: var(--color-secundario);
   padding: 10px;
 }
 
@@ -136,7 +137,7 @@ hr {
   width: 90%;
   margin: auto;
   align-items: left;
-  gap: 10px;
+
 
 }
 
@@ -160,14 +161,13 @@ hr {
   border: none;
   cursor: pointer;
   background: none;
-  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+padding: 0.8vw;
 
 }
 
 .about_me_boton:hover {
-  color: var(--color-principal);
-  outline: 2px solid var(--color-secundario);
-  transform: scale(1.05);
+
+  transform: scale(1.5);
 }
 
 .about_me_botones {
@@ -285,20 +285,24 @@ hr {
 }
 
 .proyectos h2 {
+  font-weight: 500;
   font-size: clamp(30px, 20.68px + 2.05vw, 60px);
   color: var(--color-secundario);
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-  padding-bottom: 5vw;
+  
   z-index: 2;
   text-align: left;
 }
+.proyectos p {
+ font-weight: 300;
+padding-bottom: 4vw;
 
+}
 .proyectos-grid {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  max-width: 1100px;
+ 
   margin: 0 auto;
   align-items: left;
 }
@@ -310,12 +314,6 @@ hr {
   aspect-ratio: 2 / 1;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow:
-    inset 0 0 0 rgba(0, 0, 0, 0),
-    0 6px 12px rgba(0, 0, 0, 0.3),
-    -2px -2px 4px rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -361,7 +359,6 @@ hr {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Tabs debajo del slideshow */
 .tabs {
   display: flex;
   flex-wrap: wrap;
@@ -372,7 +369,6 @@ hr {
 
 .tab-button {
   flex: 1 0 200px;
-  /* 🔹 Todos los botones del mismo ancho mínimo, se ajustan según el espacio */
   box-sizing: border-box;
   background-color: var(--color-principal-oscuro);
   color: var(--color-secundario);
@@ -381,12 +377,6 @@ hr {
   font-weight: bold;
   border: 2px solid var(--color-principal-oscuro);
   border-radius: 30px;
-  box-shadow:
-    0 -8px 20px rgba(0, 0, 0, 0.3);
-  text-shadow:
-    3px 3px 6px rgba(0, 0, 0, 0.8),
-    -2px -2px 3px rgba(255, 255, 255, 0.4);
-  transition: background 0.2s, color 0.2s, border 0.2s;
   cursor: pointer;
   text-align: center;
   box-sizing: border-box;
@@ -626,7 +616,6 @@ hr {
   padding-bottom: 4vw
 }
 
-/* Texto ocupa primera fila, todo el ancho */
 .text {
   grid-column: 1 / 3;
   grid-row: 1 / 2;
@@ -637,19 +626,23 @@ hr {
 .text h2 {
   font-size: clamp(30px, 20.68px + 2.05vw, 60px);
   color: var(--color-secundario);
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  font-weight: 500;
 }
 
 .text h4 {
-  font-size: clamp(20px, 13.79px + 1.37vw, 40px);
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-
+  font-size: clamp(15px, 10px + 1.37vw, 30px);
+  font-weight: 300;
+  color:var(--color-principal-oscuro);
+  
+  
 
 }
 
 .text p {
   font-size: clamp(13px, 8.96px + 0.89vw, 26px);
+  font-weight: 300;
+  color:var(--color-principal-oscuro);
+  padding-bottom: 4vw;
 }
 
 #introi1 {
@@ -775,10 +768,13 @@ footer {
   object-fit: cover;
   grid-column: 1/2;
   width: 80%;
+  left: 30px;
   height: 110%;
- margin-left:13px ;
-}
 
+}
+.logo-nav{
+  margin: auto
+}
   .hero-header h1 {
     font-size: 9vw;
   }
