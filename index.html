@@ -24,21 +24,22 @@
   <nav class="navbar">
     <img src="Assets\Img\Iconos\Logo.png" alt="Logo J.Design" class="logo-nav">
     <ul class="nav-links">
-      <li><a href="#about_me">Sobre mí</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#footer">Contacto</a></li>
-    </ul>
+      <li><a href="#header">Inicio</a></li>
+  <li><a href="#about_me">Sobre mí</a></li>
+  <li><a href="#proyectos">Proyectos</a></li>
 
-    <a href="mailto:j.munozfernandez96@gmail.com?subject=¡Quiero%20hablar%20contigo!" class="btn-contacto">
-      <img src="Assets\Img\Iconos\mail.png" alt="Email" id="boton_nav">
-    </a>
+</ul>
+  <button class="btn-contacto" id="copiarCorreo" title="Copiar correo">
+  <img src="Assets\Img\Iconos\mail.png" alt="Email" id="boton_nav">
+</button>
+<span id="mensajeCopiadoFlotante" style="display:none;">Copied</span>
     <a href="https://www.linkedin.com/in/jesús-munoz" target="_blank" class="btn-contacto">
       <img src="Assets\Img\Iconos\linkedin.png" alt="LinkedIn" id="boton_nav">
     </a>
   </nav>
 
 
-  <header class="hero-header">
+  <header class="hero-header" id="header">
     <img src="Assets\Img\Avatar\avatar-h.png" id="img-hero">
     <div class="hero-content">
       <h1 class="parallax-title"><img src="Assets\Img\Avatar\Logor.png" class="imglogo"><span
@@ -53,7 +54,7 @@
         <h2>Jesús Muñoz Fernández</h2>
         <h4>Diseñador gráfico y maquetador web</h4>
         <p>Es un placer darte la bienvenida a este <b>espacio personal y profesional.</b> Aquí podrás conocer más sobre mi
-          <b>trayectoria, experiencia</b> y los <b>proyectos en los que he trabajado.</b>
+        <b>trayectoria, experiencia</b> y los <b>proyectos en los que he trabajado.</b>
           Te invito a explorar el contenido y descubrir cómo mi perfil puede<b> aportar valor en distintos ámbitos.</b> Espero que encuentres algo que te interese o te inspire.</p>
       </div>
       <img src="Assets\Img\Galeria\carteld.jpg" id="introd" alt="Imagen 1">
@@ -64,14 +65,12 @@
       </div>
     </div>
 
+
+ 
     <hr id="about_me">
-    <section class="about_me_seccion oculto-scroll">
+    <section class="about_me_seccion oculto-scroll fondo fondo2">
     <div class="about_me_grid">
       <div class="about_me_avatar_area">
-
-
-
-
 
         <div class="about_me_botones">
           <div class="about_me_avatar">
@@ -128,6 +127,7 @@
       <p style="color:white">Valladolid / Segovia</p>
     </div>
   </footer>
+
   <script src="app.js"></script>
 </body>
 

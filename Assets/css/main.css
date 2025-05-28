@@ -46,7 +46,15 @@ hr {
     linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)),
     url("../Img/Fondos/fondo1.jpg");
 }
-
+.fondo2{
+    background-image: 
+     linear-gradient(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.9)),url("../Img/Fondos/fondo1.jpg");
+    padding:30px;
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    
+}
 
 
 
@@ -96,7 +104,7 @@ hr {
   font-weight: bold;
   border-radius: 16px;
   transition: background 0.2s, color 0.2s;
-  font-size: clamp(15px, 14.08px + 0.20vw, 18px);
+  font-size: clamp(14px, 13.50px + 0.20vw, 17px);
   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
   padding: 10px;
 }
@@ -111,11 +119,12 @@ hr {
   display: flex;
   justify-content: center;
   text-align: center;
-
+  background: none ;
+  box-shadow: none;
+  border: none;
 }
 
-.btn-contacto:hover,
-.btn-contacto:focus {
+.btn-contacto:hover{
   background: var(--color-secundario);
   color: var(--color-principal-oscuro);
   border-radius: 16px;
@@ -127,6 +136,24 @@ hr {
   margin: 10px;
 }
 
+#mensajeCopiadoFlotante {
+ display: none;
+  position: fixed;      /* Cambiado de absolute a fixed */
+  top: 10%;             /* Siempre a un 10% desde arriba de la ventana */
+  right: 0;
+  transform: translateX(-50%);
+  margin-top: 0;        /* Elimina el margin-top extra */
+  background: var(--color-principal);
+  color: #fff;
+  padding: 0.3em 1em;
+  border-radius: 8px;
+  font-size: 0.9em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 1002;
+}
+.btn-contacto {
+  position: relative;
+}
 /* #endregion */
 
 /* #region about me */
@@ -134,10 +161,9 @@ hr {
 .about_me_grid {
   display: grid;
   grid-template-columns: 20% 80%;
-  width: 90%;
+  width: 100%;
   margin: auto;
-  align-items: left;
-
+  gap: 5px
 
 }
 
@@ -209,9 +235,10 @@ padding: 0.8vw;
   height: 3.2vw;
   background: #f5f5f5;
   padding: 0 1em;
+  border: 1px solid var(--color-j);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border-bottom: 1px solid #e0e0e0;
+ 
 
 }
 
@@ -243,22 +270,12 @@ padding: 0.8vw;
   word-break: break-word;
   background-color: #ffffff;
   padding: clamp(10px, 6.94px + 0.68vw, 20px);
+  border: 1px solid var(--color-j);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-.about_me_titulo {
 
-  width: 90%;
-  margin: 4vw auto 0 auto;
-  font-size: clamp(30px, 20.68px + 2.05vw, 60px);
-  color: var(--color-secundario);
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
-  letter-spacing: 0.05em;
-  text-align: left;
-  margin-bottom: 50px;
-
-}
 
 .inicialt {
   font-size: clamp(12px, 9.55px + 0.54vw, 20px);
@@ -271,6 +288,9 @@ padding: 0.8vw;
   font-style: italic;
   text-align: center;
   opacity: 0.8;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 /* #endregion */

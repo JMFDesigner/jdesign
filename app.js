@@ -2,10 +2,10 @@ const bocadillo = document.getElementById("aboutBocadillo");
 const avatarImg = document.querySelector(".about_me_avatar img");
 const avatarOriginal = avatarImg ? avatarImg.src : "";
 
-// Mostrar texto base al cargar
+
 bocadillo.innerHTML = `<p class="inicialt">Haz clic en los iconos que están debajo de mi avatar para saber más sobre mí 👇</p>`;
 
-// Función común para cerrar y restaurar texto base
+
 function asignarCierre(idBotonCerrar) {
   setTimeout(() => {
     const cerrarBtn = document.getElementById(idBotonCerrar);
@@ -19,7 +19,7 @@ function asignarCierre(idBotonCerrar) {
   }, 100);
 }
 
-// Botón "conóceme"
+
 const conocemeBtn = document.getElementById("aboutConoceme");
 if (conocemeBtn) {
   conocemeBtn.addEventListener("click", () => {
@@ -36,7 +36,7 @@ if (conocemeBtn) {
   });
 }
 
-// Botón "estudios"
+
 const estudiosBtn = document.getElementById("aboutEstudios");
 if (estudiosBtn) {
   estudiosBtn.addEventListener("click", () => {
@@ -45,7 +45,7 @@ if (estudiosBtn) {
       Cuento con un <b>Ciclo Formativo de Grado Superior en Ilustración</b>, complementado con <b>Másteres en Concept Art y Cómic</b>, donde he desarrollado una sólida base artística y narrativa.
       Además, me he <b>especializado en el ámbito digital</b> mediante <b>cursos de diseño gráfico y maquetación Front-End</b>, lo que me permite unir estética y funcionalidad en cada proyecto.
       Mi trayectoria incluye una <b>amplia experiencia en diseño gráfico</b>, trabajando en entornos creativos donde la versatilidad y la atención al detalle son clave.
-      Domino a nivel profesional todo el <b>paquete Adobe Creative Cloud</b> (Photoshop, Illustrator, InDesign, After Effects, etc.) y herramientas de productividad como <b>Microsoft Office.</b>
+      Domino a nivel profesional todo el <b>paquete Adobe Creative Cloud</b> (Photoshop, Illustrator, InDesign, After Effects, etc.), herramientas de productividad como <b>Microsoft Office</b> y <b>programacion web con Html, Css y JavaScript.</b>
       <br><br>
       <button id="cerrarEstudios" style="background: none; border: none; color: red; font-size: 20px; cursor: pointer;">✖</button>
     `;
@@ -55,7 +55,7 @@ if (estudiosBtn) {
   });
 }
 
-// Botón "experiencia"
+
 const experienciaBtn = document.getElementById("aboutExperiencia");
 if (experienciaBtn) {
   experienciaBtn.addEventListener("click", () => {
@@ -74,14 +74,14 @@ if (experienciaBtn) {
   });
 }
 
-// Botón "contacto"
+
 const contactoBtn = document.getElementById("aboutContacto");
 if (contactoBtn) {
   contactoBtn.addEventListener("click", () => {
     bocadillo.innerHTML = `
       <h3>Contacto</h3>
       ¿Quieres ponerte en contacto conmigo?<br>
-      Escríbeme a <b>j.munozfernandez96@gmail.com</b>. Allí podremos hablar de todo lo que quieras saber.
+      Escríbeme a <b>j.munozfernandez96@gmail.com</b>. Allí podremos hablar y pasarte mi curriculum si estas interesado.
       <br><br>
       <button id="cerrarContacto" style="background: none; border: none; color: red; font-size: 20px; cursor: pointer;">✖</button>
     `;
@@ -128,7 +128,7 @@ const slideshow = document.getElementById('slideshow');
 const tabButtons = document.querySelectorAll('.tab-button');
 
 function mostrarCategoria(nombre) {
-  slideshow.innerHTML = ''; // Limpia el slideshow
+  slideshow.innerHTML = ''; 
 
   const slides = categorias[nombre];
   slides.forEach((item, index) => {
@@ -144,7 +144,7 @@ function mostrarCategoria(nombre) {
     slideshow.appendChild(slide);
   });
 
-  // Controles
+
   const prev = document.createElement('a');
   prev.className = 'prev';
   prev.innerHTML = '❮';
@@ -158,12 +158,12 @@ function mostrarCategoria(nombre) {
   slideshow.appendChild(prev);
   slideshow.appendChild(next);
 
-  // Reinicia slideshow
+ 
   slideIndex = 1;
   showSlides(slideIndex);
 }
 
-// Slideshow manual
+
 let slideIndex = 1;
 
 function plusSlides(n) {
@@ -184,7 +184,7 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
-// Activar pestañas
+
 tabButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     tabButtons.forEach(b => b.classList.remove('active'));
@@ -193,26 +193,26 @@ tabButtons.forEach(btn => {
   });
 });
 
-// Carga inicial (ajustada a una categoría existente)
+
 mostrarCategoria('diseñografico');
 
 
-// Ocultar navbar al hacer scroll hacia abajo y mostrar al subir
+
 let lastScrollTop = 0;
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', function () {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   if (scrollTop > lastScrollTop) {
-    // Scroll hacia abajo: ocultar navbar
+
     navbar.style.transform = 'translateY(-100%)';
     navbar.style.transition = 'transform 0.3s';
   } else {
-    // Scroll hacia arriba: mostrar navbar
+ 
     navbar.style.transform = 'translateY(0)';
     navbar.style.transition = 'transform 0.3s';
   }
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
 }, false);
 
 window.addEventListener('scroll', function () {
@@ -223,19 +223,19 @@ window.addEventListener('scroll', function () {
 
   const scrollY = window.scrollY || window.pageYOffset;
 
-  // Movimiento y opacidad para el título
+  
   const translateYTitle = Math.min(scrollY * 0.4, 200);
   const opacityTitle = Math.max(1 - scrollY / 400, 0);
   title.style.transform = `translateY(${translateYTitle}px)`;
   title.style.opacity = opacityTitle;
 
-  // Movimiento y opacidad para el subtítulo
+  
   const translateYSubtitle = Math.min(scrollY * 0.6, 250);
   const opacitySubtitle = Math.max(1 - scrollY / 300, 0);
   subtitle.style.transform = `translateY(${translateYSubtitle}px)`;
   subtitle.style.opacity = opacitySubtitle;
 
-  // Movimiento y opacidad para el contenedor hero-content (igual que título)
+ 
   const translateYHeroContent = translateYTitle;
   const opacityHeroContent = opacityTitle;
   heroContent.style.transform = `translateY(${translateYHeroContent}px)`;
@@ -260,17 +260,16 @@ window.addEventListener('load', () => {
     const subtitle = document.querySelector('.hero-content p');
     if (!title || !subtitle) return;
 
-    // Aplicar estilos para animación desde la derecha
+   
     title.style.transition = 'transform 0.8s ease, opacity 0.8s ease';
     subtitle.style.transition = 'transform 0.8s ease 0.2s, opacity 0.8s ease 0.2s';
 
-    // Empezar con opacidad 0 y desplazados a la derecha (en CSS o aquí)
     title.style.transform = 'translateX(0)';
     title.style.opacity = '1';
 
     subtitle.style.transform = 'translateX(0)';
     subtitle.style.opacity = '1';
-  }, 1000); // 3000 ms = 3 segundos
+  }, 1000); 
 });
 
 
@@ -279,10 +278,9 @@ window.addEventListener('load', () => {
     const imgHero = document.getElementById('img-hero');
     if (!imgHero) return;
 
-    // Aplicar estilos para animación desde la izquierda
     imgHero.style.transform = 'translateX(0)';
     imgHero.style.opacity = '1';
-  }, 1000); // 1 segundo de espera antes de la animación
+  }, 1000); 
 });
 
 window.addEventListener('scroll', function () {
@@ -291,7 +289,7 @@ window.addEventListener('scroll', function () {
 
   const scrollY = window.scrollY || window.pageYOffset;
 
-  // Movimiento y opacidad según el desplazamiento
+
   const translateYImg = Math.min(scrollY * 0.4, 200);
   const opacityImg = Math.max(1 - scrollY / 400, 0);
 
@@ -311,7 +309,7 @@ window.addEventListener('scroll', function () {
   const windowHeight = window.innerHeight;
 
   if (introdPosition < windowHeight * 0.8 && !introd.classList.contains("visible")) {
-    introd.classList.add("visible"); // Aparece desde la derecha y se queda
+    introd.classList.add("visible"); 
   }
 });
 
@@ -325,7 +323,7 @@ window.addEventListener('scroll', function () {
     const windowHeight = window.innerHeight;
 
     if (elementPosition < windowHeight * 0.8 && !element.classList.contains("visible")) {
-      element.classList.add("visible"); // Aparece y se queda fijo
+      element.classList.add("visible"); 
     }
   });
 });
@@ -337,7 +335,7 @@ if (window.innerWidth <= 600) {
   const images = document.querySelectorAll('#introd, #introi1, #introi2');
   const overlay = document.getElementById('overlay');
 
-  let isOpen = false; // controlar si la imagen está abierta
+  let isOpen = false;
 
   images.forEach(img => {
     img.addEventListener('click', () => {
@@ -349,7 +347,7 @@ if (window.innerWidth <= 600) {
         document.body.style.overflow = 'hidden';
         isOpen = true;
 
-        // Cerrar al tocar el overlay
+
         overlay.addEventListener('click', () => {
           overlay.style.display = 'none';
           overlay.innerHTML = '';
@@ -360,12 +358,12 @@ if (window.innerWidth <= 600) {
     });
   });
 
-  // 👇 Esta parte es para las imágenes de la galería con overlay-text
+  // Esta parte es para las imágenes de la galería con overlay-text
   document.querySelectorAll('.imagen-con-overlay').forEach(container => {
     const overlayText = container.querySelector('.overlay-text');
     if (overlayText) {
       container.addEventListener('click', () => {
-        // Toggle: si está visible, ocúltalo, y viceversa
+ 
         overlayText.style.opacity = (overlayText.style.opacity === '1') ? '0' : '1';
       });
     }
@@ -379,12 +377,28 @@ if (window.innerWidth <= 600) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible-scroll');
-          observer.unobserve(entry.target); // Solo una vez
+          observer.unobserve(entry.target); 
         }
       });
     }, {
-      threshold: 0.2 // aparece cuando el 20% es visible
+      threshold: 0.2 
     });
 
     observer.observe(seccion);
   });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btnCopiar = document.getElementById('copiarCorreo');
+  const mensaje = document.getElementById('mensajeCopiadoFlotante');
+  if (btnCopiar && mensaje) {
+    btnCopiar.addEventListener('click', () => {
+      navigator.clipboard.writeText('j.munozfernandez96@gmail.com').then(() => {
+        mensaje.style.display = 'block';
+        setTimeout(() => {
+          mensaje.style.display = 'none';
+        }, 1000);
+      });
+    });
+  }
+});
+
