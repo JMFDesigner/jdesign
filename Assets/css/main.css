@@ -138,11 +138,11 @@ text-shadow:
 
 #mensajeCopiadoFlotante {
  display: none;
-  position: fixed;      /* Cambiado de absolute a fixed */
-  top: 10%;             /* Siempre a un 10% desde arriba de la ventana */
+  position: fixed; 
+  top: 10%;            
   right: 0;
   transform: translateX(-50%);
-  margin-top: 0;        /* Elimina el margin-top extra */
+  margin-top: 0; 
   background: var(--color-principal);
   color: #fff;
   padding: 0.3em 1em;
@@ -315,6 +315,7 @@ padding: 0.8vw;
 .proyectos p {
  font-weight: 300;
 padding-bottom: 4vw;
+font-size: clamp(13px, 8.96px + 0.89vw, 26px);
 
 }
 .proyectos-grid {
