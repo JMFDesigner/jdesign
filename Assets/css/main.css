@@ -56,8 +56,6 @@ hr {
     
 }
 
-
-
 /* #endregion */
 
 /* #region nav*/
@@ -105,7 +103,9 @@ hr {
   border-radius: 16px;
   transition: background 0.2s, color 0.2s;
   font-size: clamp(14px, 13.50px + 0.20vw, 17px);
-  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+text-shadow: 
+  0.2px 0.2px 0.2px #0000004d,   /* abajo a la derecha */
+  0px 0.2px 0.2px #00000028;   /* directamente abajo */
   padding: 10px;
 }
 
